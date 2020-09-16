@@ -1,0 +1,66 @@
+/* START | Reset body spacing ... */
+body {margin: 0; font-family: Arial, Helvetica, sans-serif;}
+/* START | Reset body spacing ... */
+
+/* START | Horizontal navigation */
+/* Basis styling voor de container van de links */
+.topnav {
+    overflow: hidden; /* Content die buiten de <nav> valt wordt niet getoond en krijgt geen scrollbar */
+    background-color: #333; /* Zet de achtergrond kleur van .topnav, in dit geval een donkergrijs */
+}
+
+/* Basis styling voor de links */
+.topnav a {
+    float: left; /* Genereert een box aan de linkerkant voor de links, elke link is links uitgelijnd*/
+    display: block; /* Genereert een block level box voor de links */
+    color: #f2f2f2; /* Geeft de text van de links een lichte kleur */
+    text-align: center; /* De text wordt in het midde uitgelijnd binnen de box */
+    padding: 14px 16px; /* Zet padding met 14px boven en onder en 16 px links en rechts */
+    text-decoration: none; /* Haal het streepje onder de links weg zodat ze meer op knopjes lijken */
+    font-size: 17px; /* Zet het lettertype van de link-text */
+}
+
+/* Als er met de muis over de links wordt beweegt */
+.topnav a:hover {
+    background-color: #ddd; /* Als er met de muis over de link word gehovered geef hem dan een andere achtergrondkleur*/
+    color: #000; /* Als er met de muis over de link word gehoverd geef hem dan een andere text kleur */
+}
+
+/* Als een link genest in .topnav ook de class .active heeft */
+.topnav a.active {
+    background-color: #4CA98a; /* Geef de link een andere achtergrond kleur als de link de huidige pagina is */
+    color: #fff; /* Geef de link een andere text kleur als de link de huidige pagina is */
+}
+/* Het icoon om het menu te openen als de website op mobile wordt bekeken */
+.topnav .icon {
+    display: none; /* toon het icon niet op de website */
+}
+
+/* Media queries voor als de website op mobile wordt bekeken */
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {
+        display: none; /* Zet elke a in .topnav op display none behalve de eerste (:not(:first-child)) */
+    }
+    .topnav a.icon {
+        float: right; /* Genereert een box aan de rechterkant voor het icon */
+        display: block; /* Genereert een block level box voor het icon */
+    }
+}
+/* Door ons stukje javascript dat ik nog moet weghalen krijgt de .topnav een .responsive class. */
+@media screen and (max-width: 600px) {
+    .topnav.responsive {
+        position: relative; /* GEEN IDEE */
+    }
+    .topnav.responsive .icon {
+        position: absolute; /* Door middel van top, bottom, left, right word het icon gezet */
+        right: 0; /* Zet het right margin van het icon op 0 */
+        top: 0; /* Doe hetzelfde voor de top margin */
+    }
+    .topnav.responsive a {
+        float: none; /* Float de box van de links niet un specifieke richting op. */
+        display: block; /* Genereert een block level box voor de links */
+        text-align: left; /* Laat de text links uitlijnen */
+    }
+}
+
+/* END | Horizontal navigation */
