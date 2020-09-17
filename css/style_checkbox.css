@@ -107,7 +107,7 @@ label #close-menu {
 }
 /* START | Image + text onder menu*/
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 740px) {
     label #open-menu {
         display: block;
     }
