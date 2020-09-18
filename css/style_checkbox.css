@@ -6,7 +6,7 @@
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-/* START | Spacing reset en default font family */
+/* END | Spacing reset en default font family */
 * {
     margin: 0;
     padding: 0;
