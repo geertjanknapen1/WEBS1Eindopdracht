@@ -6,7 +6,7 @@
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-/* END | Spacing reset en default font family */
+/* START | Spacing reset en default font family */
 * {
     margin: 0;
     padding: 0;
@@ -19,131 +19,134 @@ body {
 
 /* START | Responsive navigatie menu horizontaal */
 nav {
-    height: 50px;
-    background: #000;
+    height: 50px; /* zet de height van het nav element op 50px */
+    background: #000; /* geef een zwarte achtergrond kleur */
 }
 
 nav h1 {
-    position: absolute;
-    width: 200px;
-    top: 12px;
-    left: 5%;
-    color: #fff;
-    letter-spacing: 7px;
-    font-weight: bold;
+    position: absolute; /* geef de h1 binnen het nav element een positie van absolute, zo wordt hij relatief het dichts bij zijn parent geplaats, dus nav in dit geval*/
+    width: 200px; /* de text krijgt een breedte van 200px */
+    top: 12px; /* de tekst krijgt een top van 12px, zodat hij 12 px van de bovenkant van zijn container afzit. */
+    left: 5%; /* de tekst wordt 5% van de linkerkant van de container af geplaatst */
+    color: #fff; /* de tekst krijgt een witte kleur */
+    letter-spacing: 7px; /* d ruimte tussen de letters zetten we hier op 7px */
+    font-weight: bold; /* de tekst wordt hier op dikgedrukt gezet */
 }
 
 nav h1 span.red-color {
-    color: crimson;
+    color: crimson; /* de kleur van het span element met de class .red-color wordt hier op crimson (een soort rood) gezet */
 }
 
 nav ul {
-    float: right;
-    margin-right: 25px;
-    list-style: none;
+    float: right; /* float de ongeorderde lijst naar rechts, dus lijn de lijst rechts uit ter vergelijking van het parent element, in dit geval nav */
+    margin-right: 25px; /* geef de lijst aan de rechterkant een margin van 25px, dus een spacing van 25px aan de rechterkant */
+    list-style: none; /* zorg ervoor dat de lijst geen bolletjes laat zien die gebruikelijk zijn bij een lijst */
 }
 
 nav ul li {
-    display: inline-block;
-    line-height: 50px;
-    padding: 0 16px;
+    display: inline-block; /* Zorgt dat de items in de lijst inline geplaatst wordt dus niet overlapt naar een nieuwe regel */
+    line-height: 50px; /* De hoogte van de lijn wordt gezet op 50px */
+    padding: 0 16px; /* shorthand voor padding. Zet top en bottom naar 0 en zet links en rechts naar 16. */
+    /* bovenstaande zou ook kunnen met padding-left. padding-right, padding-top, padding-bottom maar een shorthand is makkelijker te zetten. */
 }
 
 nav ul li.active {
-    background-color: crimson;
+    background-color: crimson; /* als het item in de lijst ook de class .active bevat zal deze een achtergrond kleur van crimson krijgen */
 }
 
 nav ul li:hover {
-    background-color: crimson;
+    background-color: crimson; /* als er met de muis over een item in de lijst gegaan wordt zal deze een achtergrond kleur van crimson krijgen tot dat de muis hier weer wordt afgehaald */
 }
 
 nav ul li a {
-    position: relative;
-    padding: 5px 0;
-    color: #fff;
-    font-size: 18px;
-    text-decoration: none;
+    position: relative; /* een element met deze waarde word gepositioneerd ten opzichte van zijn static positie, dit kan door left, top, right, bottom */
+    padding: 5px 0; /* shorthand voor padding. padding-top en padding-bottom wordt op 5px gezet, links en rechts op 0 */
+    color: #fff; /* tekst krijgt een witte kleur */
+    font-size: 18px; /* het lettertype wordt 18px groot gezet */
+    text-decoration: none; /* text-decoration wordt op none gezet zodat je niet het standaard streepje onder een link krijgt dat je normaal wel krijgt. */
 }
 
 label #open-menu,
 label #close-menu {
-    font-size: 30px;
-    color: #fff;
-    float: right;
-    line-height: 50px;
-    margin-right: 30px;
-    cursor: pointer;
-    display: none;
+    font-size: 30px; /* label met een id van open-menu en close-menu wordt allebei op 30px lettergrootte gezet */
+    color: #fff; /* tekst kleur wordt op wit gezet */
+    float: right; /* we floaten het weer naar rechts ten opzichte van het parent element */
+    line-height: 50px; /* de line height wordt op 50px gezet zodat dit overeenkomt met de line height van de lijst items */
+    margin-right: 30px; /* we geven het een margin van 30px aan de rechterkant anders zit het zo tegen de rechterkant van de webpagina aan */
+    cursor: pointer; /* als hier overheen wordt bewogen met de muis zal deze een pointer worden zodat het duidelijk is dat hier op te klikken valt */
+    display: none; /* we zetten de display op none omdat we niet willen dat dit getoond wordt op de pagina zolang het op desktop wordt weergegeven */
 }
 
 #res-menu {
-    display: none;
+    display: none; /* #res-menu is het label voor de checkbox, dit willen we niet tonen op desktop weergave vandaar display:none */
 }
 
 /* START | Image + text onder menu*/
 .banner-area {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.8)), url('https://images.pexels.com/photos/2080192/pexels-photo-2080192.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
-    background-size: cover;
-    background-position: center center;
-    height: 70vh;
+    /* hierboven zetten we een achtergrond afbeelding voor de .banner-area div, deze krijgt een verloopje eroverheen van zwart met 0.65 opacity naar 0.80 opacity naar rechts */
+    background-size: cover; /* we willen dat deze achtergrond de hele div bedekt, ook als hierdoor de afbeelding gestretcht wordt of afgesneden wordt */
+    background-position: center center; /* we willen dat deze afbeelding zowel horizontaal als vertical naar het midden wordt gecentreerd binnen zijn container */
+    height: 70vh; /* de hoogte wordt gezet naar 70vh, vh is relatief gezien 1% van de viewheight. 70vh is dus 70% viewheight (mits ik dit concept goed snap) */
 }
 .banner-text {
-    position: absolute;
-    width: 100%;
-    height: 90%;
-    display: -webkit-flex;
-    display: -moz-flex;
+    position: absolute; /* geef de h1 binnen het nav element een positie van absolute, zo wordt hij relatief het dichts bij zijn parent geplaatst */
+    width: 100%; /* geef de text een breedte van 100% */
+    height: 90%; /* geef de text een hoogte van 90% */
+    display: -webkit-flex; /* hier wordt aangegeven dat de display flex moet zijn, dit betekent dat dit element kan groeien krimpen relatief tot de hoogte breedte van het parent element (mits ik concept goed snap) */
+    display: -moz-flex; /* doe dit ook voor verschillende browsers */
     display: -ms-flex;
     display: -o-flex;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /* we willen dat elk item binnen deze flexibele div naar het midden worden uitgelijnt */
+    justify-content: center; /* zorgt dat de flex items vanuit het midden van de container worden gecentreerd */
 }
 .banner-text h2{
-    color: #fff;
-    margin-top: -140px;
-    font-size: 56px;
-    text-align: center;
+    color: #fff; /* zet de tekstkleur naar wit voor de h1 binnen de div met de class .banner-text */
+    margin-top: -140px; /* zet een negatief margin aan de top zodat de tekst naar boven zal verplaatsen */
+    font-size: 56px; /* geef de text een lettertype groote van 56px */
+    text-align: center; /* centreer de tekst in het midden */
 }
 /* START | Image + text onder menu*/
 
+/* Als de maximale breedte van het scherm minder dan 740px is pas dan de volgende styles toe */
 @media screen and (max-width: 740px) {
     label #open-menu {
-        display: block;
+        display: block; /* zorg ervoor dat het label met een id van #open-menu getoond wordt */
     }
 
     nav ul {
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: crimson;
-        top: 50px;
-        left: -100%;
-        text-align: center;
-        transition: .5s;
-        z-index: 10;
+        position: fixed; /* position fixed om het element relatief tot de viewport te kunnen positioneren, dit element blijft daardoor altijd op dezelfde plek */
+        width: 100%; /* zet de breedte van dit element op 100%; */
+        height: 100vh; /* dit element dient een hoogte te hebben die net zo groot is als de viewport, vandaar de 100vh */
+        background: crimson; /* zet de achtergrond kleur naar crimson */
+        top: 50px; /* de lijst dient 50px van de bovenkant van de viewport te worden weergegeven, dit zodat het menu zichtbaal blijft */
+        left: -100%; /* zet de left naar -100% zodat de lijst aan de linkerkant buiten de viewport wordt weergegeven */
+        text-align: center; /* centreer de lijst in het midden van zijn parent element */
+        transition: .5s; /* er moet een transitie gebeuren die .5 seconde duurt */
+        z-index: 10; /* op websites bestaat ook een z-as in tegenstelling tot alleen een x en y-as. Dit element krijgt daar een waarde van 10 zodat het altijd boven alle andere element wordt getoond */ 
     }
 
     nav ul li {
-        display: block;
-        margin: 40px 0;
-        line-height: 30px;
+        display: block; /* zet display block voor de lijst items zodat ze altijd op een nieuwe regel beginnen. */
+        margin: 40px 0; /* shorthand voor margin, zet top en bottom naar 40px en rechts en links naar 0 */
+        line-height: 30px; /* de line height wordt op 30px gezet */
     }
 
     nav ul li a {
-        font-size: 20px;
+        font-size: 20px; /* zet de tekstgrootte van de linkjes in de lijst op 20px. */
     }
 
     #res-menu:checked ~ ul {
-        left: 0;
+        left: 0; /* als de checkbox aangevinkt is dan wordt het child element van ul zijn left met een transition van .5s op 0 gezet zodat deze in de viewport wordt getoond */
     }
 
     #res-menu:checked ~ label #open-menu {
-        display: none;
+        display: none; /* als de checkbox aangevinkt is dan wordt het label met een id van open-menu op none gezet zodat deze niet zichtbaar is omdat het menu open is */
     }
 
     #res-menu:checked ~ label #close-menu {
-        display: block;
+        display: block;/* als de checkbox aangevinkt is dan wordt het label met een id van close-menu op block gezet zodat deze zichtbaar is omdat het menu open is */
     }
 }
 
