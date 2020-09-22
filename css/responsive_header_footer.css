@@ -17,6 +17,12 @@ body {
 }
 /* END | Spacing reset en default font family */
 
+/* START | Span tag with crimson color for some texts */
+span.crimson {
+    color: crimson;
+}
+/* END | Span tag with crimson color for some texts */
+
 /* START | Responsive navigatie menu horizontaal */
 nav {
     height: 50px; /* zet de height van het nav element op 50px */
@@ -31,10 +37,6 @@ nav h1 {
     color: #fff; /* de tekst krijgt een witte kleur */
     letter-spacing: 7px; /* d ruimte tussen de letters zetten we hier op 7px */
     font-weight: bold; /* de tekst wordt hier op dikgedrukt gezet */
-}
-
-nav h1 span.red-color {
-    color: crimson; /* de kleur van het span element met de class .red-color wordt hier op crimson (een soort rood) gezet */
 }
 
 nav ul {
@@ -81,6 +83,8 @@ label #close-menu {
     display: none; /* #res-menu is het label voor de checkbox, dit willen we niet tonen op desktop weergave vandaar display:none */
 }
 
+/* END | Responsive navigatie menu horizontaal */
+
 /* START | Image + text onder menu*/
 .banner-area {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.8)), url('https://images.pexels.com/photos/2080192/pexels-photo-2080192.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
@@ -107,10 +111,71 @@ label #close-menu {
     font-size: 56px; /* geef de text een lettertype groote van 56px */
     text-align: center; /* centreer de tekst in het midden */
 }
-/* START | Image + text onder menu*/
+/* END | Image + text onder menu*/
+
+/* START | Three column responsive footer */
+
+footer {
+    display: flex; /* hier wordt aangegeven dat de display flex moet zijn, dit betekent dat dit element kan groeien krimpen relatief tot de hoogte breedte van het parent element (mits ik concept goed snap) */
+    flex-direction: row; /* Zorgt dat de content naast elkaar wordt geplaats */
+    justify-content: center; /* zorgt dat de flex items vanuit het midden van de container worden gecentreerd */
+    align-items: center; /* we willen dat elk item binnen deze flexibele div naar het midden worden uitgelijnt */
+    background-color: #000; /* Geef de footer een zwarte achtergrond kleur */
+    height: 200px; /* zet de hoogte van de footer op 200px */
+    width: 100%; /* Zet de breedte van de footer op 100% */
+}
+
+footer .f-column {
+    width: 33.3333%; /* elke rij krijgt een width van 33.3333% (want 100 / 3 = 33.3333) */
+    color: white; /* tekst kleur wordt op wit gezet */
+    text-align: left; /* de tekst dient naar links uitgelijnd te worden */
+    margin: 0 120px; /* de kolom krijgt links en rechts een margin van 120 px */
+    height: 100%; /* de hoogte van een kolom wordt naar 100% van het parent element (footer) gezet */
+}
+
+footer .f-column h3 {
+    margin-top: 25px; /* de titels (h3) binnen de kolomen krijgen een margin-top van 25px zadat ze niet tegen de bovenkant van het footer element aanstaan */
+    margin-bottom: 20px; /* de titels krijgen ook een margin-bottom van 20px zodat ze niet tegen de andere tekst in de de kolom aanstaan */
+    font-size: 25px; /* de titels krijgen een tekstgrootte van 25px */
+}
+
+footer .f-column p {
+    font-size: 17px; /* de andere tekst in de footer krijgt een tekstgrootte van 17px */
+}
+
+footer .f-column .social-icons .f-icon-link {
+    display: inline-block; /* de social icoontjes krijgen een display van inline-block zodat ze naast elkaar op dezelfde regel komen ipv onder elkaar */
+    padding: 0 5px; /* de icoontjes krijgen een padding van 5px aan de linker en rechter kant, zo staan ze niet tegen elkaar */
+    color: crimson; /* de icoontjes krijgen de kleur crimson zodat ze overeenkomen met het kleurgebruik op de website */
+}
+/* Hover for linkedin icon */
+footer .f-column .social-icons .f-icon-link.linkedin:hover {
+    transition: .3s; /* als je over het icoontje hovert dan duurt de transitie van de kleur .3 seconde */
+    color: #0E76A8; /* de nieuwe kleur wordt de kleur van het linkedin logo */
+}
+/* Hover for instagram icon */
+footer .f-column .social-icons .f-icon-link.instagram:hover {
+    transition: .3s; /* als je over het icoontje hovert dan duurt de transitie van de kleur .3 seconde */
+    color: transparent; /* de kleur van het icoon wordt op transparant gezet */
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%); /* we geven de achtergrond kleur een kleur met radius die overeenkomen met het instagram logo */
+    -webkit-background-clip: text; /* we zetten de background-clip op text zodat het lijkt alsof het icoon veranderd maar in daadwerkelijkheid verandert de achtergrond-kleur van het icoon */
+    background-clip: text; /* omdat we dit op text zetten zal alleen de achtergrond kleur veranderen waar het icoon de achtergrond raakt vandaar dat het lijkt alsof het icoon van kleur verandert */
+}
+/* Hover for facebook icon */
+footer .f-column .social-icons .f-icon-link.facebook:hover {
+    transition: .3s; /* als je over het icoontje hovert dan duurt de transitie van de kleur .3 seconde */
+    color: #1da1f2; /* de nieuwe kleur wordt de kleur van het facebook logo */
+}
+
+/* END | Three column responsive footer */
+
+
+/* START | Alle responsiviteit */
 
 /* Als de maximale breedte van het scherm minder dan 740px is pas dan de volgende styles toe */
 @media screen and (max-width: 740px) {
+
+    /* START | Responsiviteit header */
     label #open-menu {
         display: block; /* zorg ervoor dat het label met een id van #open-menu getoond wordt */
     }
@@ -148,6 +213,38 @@ label #close-menu {
     #res-menu:checked ~ label #close-menu {
         display: block;/* als de checkbox aangevinkt is dan wordt het label met een id van close-menu op block gezet zodat deze zichtbaar is omdat het menu open is */
     }
+
+    /* END | Responsiviteit header */
+
+    /* START | Responsiviteit footer */
+    footer {
+        height: 500px; /* op mobiele weergave is de footer 500px hoog */
+        display: flex; /* hier wordt aangegeven dat de display flex moet zijn, dit betekent dat dit element kan groeien krimpen relatief tot de hoogte breedte van het parent element (mits ik concept goed snap) */ 
+        flex-direction: column; /* de flex content moet onder elkaar weergegeven worden, vandaar dat we deze op column zetten */
+        justify-content: left; /* we willen dat elk item binnen deze flexibele div naar links worden uitgelijnt */
+        align-items: center; /* zorgt dat de flex items vanuit het midden van de container worden gecentreerd */
+    }
+
+    footer .f-column {
+        width: 100%; /* de breedte van een kolom wordt nu 100% omdat we willen dat deze het hele telefoonscherm bedekt */
+        margin: 15px 15px; /* een margin van 15px wordt aan alle zijde van de kolom gegeven zodat deze elkaar niet raken */
+    }
+
+    footer .f-column h3, p, .social-icons {
+        text-align: left; /* de icons worden op telefoon links uitgelijnt */
+        padding: 0 20px; /* ze krijgen links en rechts een padding zodat ze niet de rand van het scherm raken en elkaar niet raken */
+    }
+
+    footer .f-column h3{
+        margin-top: 25px; /* de titels krijgen een margin-top van 25px zodat ze niet de bovenkant van de footer raken en niet de tekst onder de titels raken */
+    }
+
+    footer .f-column p {
+        font-size: 18px; /* de niet-titel tekst in de footer krijgt een kleiner font op mobiel dan op desktop */
+        margin-top: -10px; /* ook krijgt de tekst een negatief 10 margin top zodat de tekst dichter op de titels staat op mobiel */
+    }
+    
+    /* END | Responsiviteit footer */
 }
 
-/* END | Responsive navigatie menu horizontaal */
+/* END | Alle responsiviteit */
