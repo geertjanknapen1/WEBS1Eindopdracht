@@ -240,6 +240,11 @@ footer {
         font-size: 18px; /* de niet-titel tekst in de footer krijgt een kleiner font op mobiel dan op desktop */
         margin-top: -10px; /* ook krijgt de tekst een negatief 10 margin top zodat de tekst dichter op de titels staat op mobiel */
     }
+
+    .f-column .social-icons .f-icon-link.instagram:hover {
+        transition: .3s; /* als je over het icoontje hovert dan duurt de transitie van de kleur .3 seconde */
+        color: #DD2A7B; /* de nieuwe kleur wordt de kleur van het facebook logo */
+    }
     
     /* END | Responsiviteit footer */
 }
