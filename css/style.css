@@ -77,8 +77,14 @@ body {margin: 0; font-family: Arial, Helvetica, sans-serif;}
 .itemList{
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-between;
     margin: 25px 0;
+}
+.itemList h2{
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
 }
 .item{
     width: 23%;
