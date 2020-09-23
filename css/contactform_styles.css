@@ -1,3 +1,66 @@
 .main {
     padding: 5% 2%;
 }
+
+.contact-form-container {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: #000;
+    padding: 20px 15px;
+    border: none;
+    border-radius: 15px;
+}
+
+.contact-form-column {
+    display: flex;
+    background-color: #000;
+    margin: 0 5px;
+    width: 50%;
+    justify-content: space-between;
+}
+
+.form-label {
+    margin: 10px;
+    font-size: 22px;
+    color: white;
+}
+
+.form-control {
+    margin: 10px;
+    font-size: 22px;
+    width: 100%;
+}
+
+select,
+input[type=text],
+textarea {
+  width: 100%;
+  padding: 10px;
+  line-height: 40px;
+  font-size: 20px;
+  height: 40px;
+  border: 1px solid crimson;
+  color: #fff;
+  background: #000;
+  border-radius: 4px;
+}
+
+.form-submit {
+    margin: 10px;
+    padding: 15px;
+    color: crimson;
+    background-color: #fff;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-submit:hover {
+    transition: .3s;
+    color: #fff;
+    background-color: crimson;
+}
+
+.contact-form-column iframe {
+    border-radius: 15px;
+}
