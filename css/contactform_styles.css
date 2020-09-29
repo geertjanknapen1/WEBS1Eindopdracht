@@ -47,6 +47,7 @@
 .f-row.row-1 input[type=text], .f-row.row-1 input[type=email] {
     border: 1px solid crimson;
     background-color: #000;
+    color: #fff;
     margin-top: 10px;
     margin-bottom: 10px;
     width: 90%;
@@ -59,6 +60,7 @@
 .f-row.row-2 textarea {
     border: 1px solid crimson;
     background-color: #000;
+    color: #fff;
     margin-top: 10px;
     margin-bottom: 10px;
     width: 95%;
