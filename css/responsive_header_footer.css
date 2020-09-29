@@ -177,6 +177,11 @@ footer {
         display: block; /* zorg ervoor dat het label met een id van #open-menu getoond wordt */
     }
 
+    nav {
+        position: fixed;
+        width: 100%;
+    }
+
     nav ul {
         position: fixed; /* position fixed om het element relatief tot de viewport te kunnen positioneren, dit element blijft daardoor altijd op dezelfde plek */
         width: 100%; /* zet de breedte van dit element op 100%; */
