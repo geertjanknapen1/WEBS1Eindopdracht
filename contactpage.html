@@ -38,33 +38,31 @@
 
             <div class="contact-form-column">
                     <div class="contact-form">
-                        <div class="form-inputs">
-                            <table>
-                                <tr>
-                                    <td><label class="form-label" for="firstname">Voornaam:</label></td>
-                                    <td><input class="form-control" type="text" id="firstname" name="firstname" placeholder="Uw voornaam.." required></td>
-                                </tr>
-                                <tr>
-                                    <td><label class="form-label" for="lastname">Achternaam:</label></td>
-                                    <td><input class="form-control" type="text" id="lastname" name="lastname" placeholder="Uw achternaam.." required></td>
-                                </tr>
-                                <tr>
-                                    <td><label class="form-label" for="subject">Onderwerp:</label></td>
-                                    <td>
-                                        <select class="form-control select" id="subject" name="subject" required>
-                                            <option value="question">Vraag</option>
-                                            <option value="complaint">Klacht</option>
-                                          </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><label class="form-label" for="message">Message:</label></td>
-                                    <td><textarea class="form-control textarea" id="message" name="message" placeholder="Laat hier uw bericht achter." cols="20" required></textarea></td>
-                                </tr><tr>
-                                    <td><input class="form-submit" type="submit" value="Verzenden"></td>
-                                </tr>
-                            </table>
-                        </div>
+                        <form>
+                            <div class="f-row row-1">
+                                <div class="form-content">
+                                    <label for="name">Naam:</label><br/>
+                                    <input type="text" name="firstname" id="name" placeholder="Uw naam">
+                                </div>
+                                <div class="form-content">
+                                    <label for="email">Email:</label><br/>
+                                    <input type="email" name="email" id="email" placeholder="Uw email">
+                                </div>
+                            </div>
+
+                            <div class="f-row row-2">
+                                <div class="form-textarea">
+                                    <label for="message">Bericht:</label>
+                                    <textarea name="message" id="message" placeholder="Uw bericht"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="f-row row-3">
+                                <div class="form-content">
+                                    <input type="submit" value="Verzenden">
+                                </div>
+                            </div>
+                        </form>
                     </div>
             </div>
 

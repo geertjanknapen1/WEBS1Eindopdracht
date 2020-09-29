@@ -17,50 +17,107 @@
     margin: 0 5px;
     width: 50%;
     justify-content: space-between;
-}
-
-.form-label {
-    margin: 10px;
-    font-size: 22px;
-    color: white;
-}
-
-.form-control {
-    margin: 10px;
-    font-size: 22px;
-    width: 100%;
-}
-
-select,
-input[type=text],
-textarea {
-  width: 100%;
-  padding: 10px;
-  line-height: 40px;
-  font-size: 20px;
-  height: 40px;
-  border: 1px solid crimson;
-  color: #fff;
-  background: #000;
-  border-radius: 4px;
-}
-
-.form-submit {
-    margin: 10px;
-    padding: 15px;
-    color: crimson;
-    background-color: #fff;
-    font-weight: bold;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.form-submit:hover {
-    transition: .3s;
     color: #fff;
-    background-color: crimson;
 }
 
 .contact-form-column iframe {
     border-radius: 15px;
+}
+
+.contact-form {
+    width: 100%;
+}
+
+.f-row.row-1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.form-content {
+    width: 50%;
+}
+
+.form-content label, .form-textarea label {
+    font-size: 20px;
+}
+
+
+.f-row.row-1 input[type=text], .f-row.row-1 input[type=email] {
+    border: 1px solid crimson;
+    background-color: #000;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 90%;
+    height: 25px;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 20px;
+}
+
+.f-row.row-2 textarea {
+    border: 1px solid crimson;
+    background-color: #000;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 95%;
+    height: 150px;
+    resize: none;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 20px;
+}
+
+.f-row.row-3 input[type=submit] {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid crimson;
+    color: #fff;
+    background-color: #000;
+    height: 50px;
+    width: 120px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.f-row.row-3 input[type=submit]:hover {
+    border: 1px solid crimson;
+    background-color: crimson;
+}
+
+@media screen and (max-width: 740px) {
+    .contact-form-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-form-column {
+        margin: 0 0 20px 0;
+        width: 90%;
+        padding: 15px;
+    }
+
+    .f-row.row-1 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-content {
+        width: 100%;
+    }
+
+    .f-row.row-1 input[type=text], .f-row.row-1 input[type=email] {
+        width: 100%;
+    }
+
+    .f-row.row-2 textarea {
+        width: 100%;
+    }
+
+    .f-row.row-2 input[type=submit] {
+        width: 100%;
+    }
 }
