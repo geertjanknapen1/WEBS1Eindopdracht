@@ -1,8 +1,8 @@
 .main{
     width: 100%;
-    padding: 2% 2%;
     margin: 0 auto;
     background:#000;
+    padding-top:50px ;
 }
 .vid-frame{
     max-width: 1200px;
@@ -21,26 +21,28 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    margin: 25px;
+    margin: 0 25px;
 }
 .vid-overview .item{
-    width: 18%;
-    height: 500px;
+    width: 19%;
+    height: 450px;
+    padding-top: 20px;
 }
 .vid-overview .sub-vid{
     width: 100%;
-    height: 75%;
+    height: 100%;
 }
 
-.vid-overview .item .text{
-    top: 0;
-    color: white;
-    position: relative;
-    font-size: 32px;
-    text-align: center;
-}
-.text sub{
-    font-size: 12px;
-    line-height: 0;
-}
 
+@media screen and (max-width: 376px) {
+    .vid-overview .item{
+        width: 100%;
+        height: 300px;
+    }
+    .vid-overview .item:last-of-type{
+        margin-bottom: 5px;
+    }
+    .vid-frame .main-vid{
+        height: 350px;
+    }
+}

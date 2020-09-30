@@ -1,0 +1,49 @@
+.main{
+    width: 100%;
+    margin: 0 auto;
+    background:#000;
+    padding-top:50px ;
+    color: white;
+}
+.row{
+    width: 100%;
+}
+
+.blog-Item{
+    width: 100%;
+    padding-bottom: 15px;
+}
+
+.dis-Flex{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.image-Col{
+   width: 41%; 
+}
+.image{
+    background-image:url('../imgs/info.jpg');
+    height: 100%;
+    background-size: cover;
+    background-position: top;
+    transition: all 0.3s;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.image::after{
+    content: '';
+    width: 50%;
+    position: absolute;
+    z-index: -1;
+    height: 50%;
+    right: 0;
+    top: 0px;
+    background: rgba(237,187,153,0.9);
+}
+
+.text-Col{
+    width:50%;
+    padding: 40px 50px;
+}
