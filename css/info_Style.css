@@ -11,7 +11,7 @@
 
 .blog-Item{
     width: 100%;
-    padding-bottom: 15px;
+    padding: 2% 0;
 }
 
 .dis-Flex{
@@ -46,4 +46,11 @@
 .text-Col{
     width:50%;
     padding: 40px 50px;
+}
+
+
+@media screen and (max-width: 376px) {
+    .image-Col, .text-Col{
+        width: 100%;
+    }
 }
