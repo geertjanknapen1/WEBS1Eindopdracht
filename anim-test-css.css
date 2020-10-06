@@ -1,0 +1,25 @@
+/* 
+Easing: Geven wat meer animatie erbij? developer.mozilla.org/en-US/docs/Web/CSS/@keyframes
+je definieërt een start en begin, daartussen gebeurt de animatie, dit doet hij zelf. Hier in kun je nog tussenstukjes definieëren.
+Tweening: rekent zelf uit wanneer iets moet gebeuren
+
+focus op animatie of hover op animatie, on click met checkbox ofzo
+*/
+
+.test {
+    position: relative;
+    height: 70px;
+    width: 70px;
+    background-color: brown;
+}
+
+.test:hover {
+    animation: slideIn 3s;
+}
+
+@keyframes slideIn {
+    0% { top: 0; left: 0;}
+    30% { top: 50px;}
+    68%, 72% { left: 50px;}
+    100% {top: 100px; left: 95%; }
+}
