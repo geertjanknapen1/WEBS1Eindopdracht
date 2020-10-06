@@ -39,7 +39,7 @@
     width: 50%;
 }
 
-.form-content label, .form-textarea label {
+.form-content label, .form-textarea label, .form-select label {
     font-size: 20px;
 }
 
@@ -52,6 +52,19 @@
     margin-bottom: 10px;
     width: 90%;
     height: 25px;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 20px;
+}
+
+.f-row.row-2 select {
+    border: 1px solid crimson;
+    background-color: #000;
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 96.7%;
+    height: 35px;
     padding: 5px;
     border-radius: 4px;
     font-size: 20px;
