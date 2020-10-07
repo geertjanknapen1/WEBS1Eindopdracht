@@ -57,6 +57,10 @@
     font-size: 20px;
 }
 
+input:focus, select:focus, textarea:focus {
+    animation: inputGlow 800ms ease-out infinite alternate;
+}
+
 .f-row.row-2 select {
     border: 1px solid crimson;
     background-color: #000;
@@ -135,4 +139,9 @@
     .f-row.row-2 input[type=submit] {
         width: 100%;
     }
+}
+
+@keyframes inputGlow {
+    0% { box-shadow:  0 0 40px rgba(220, 20, 60, .2); }
+    100% { box-shadow:  0 0 40px rgba(220, 20, 60, .8); }
 }
