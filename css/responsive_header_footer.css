@@ -206,7 +206,8 @@ footer {
     }
 
     #res-menu:checked ~ ul {
-        left: 0; /* als de checkbox aangevinkt is dan wordt het child element van ul zijn left met een transition van .5s op 0 gezet zodat deze in de viewport wordt getoond */
+        animation: slideIn 2s;
+        animation-fill-mode: forwards;
     }
 
     #res-menu:checked ~ #open-menu {
@@ -252,6 +253,10 @@ footer {
         color: #DD2A7B; /* de nieuwe kleur wordt de kleur van het facebook logo */
     }
     
+    @keyframes slideIn {
+        0% { left: -100; }
+        100% { left: 0; }
+    }
     /* END | Responsiviteit footer */
 }
 
