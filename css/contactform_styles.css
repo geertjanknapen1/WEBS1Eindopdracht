@@ -59,6 +59,8 @@
 
 input:focus, select:focus, textarea:focus {
     animation: inputGlow 800ms ease-out infinite alternate;
+    outline: none;
+    border: 1px solid crimson;
 }
 
 .f-row.row-2 select {
