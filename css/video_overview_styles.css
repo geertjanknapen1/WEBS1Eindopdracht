@@ -9,9 +9,10 @@ body, * {
 
 /* START | body styles for the video overview page */
 
-.main {
+.main h1 {
     width: 100%;
-    padding: 5% 2%;
+    padding-top: 5%;
+    padding-left: 2%;
     margin: 0 auto;
 }
 
@@ -58,9 +59,19 @@ body, * {
 }
 
 @media screen and (max-width: 376px) {
+    
+    nav {
+        position: fixed;
+        width: 375px;
+        z-index: 10;
+    }
     .card {
         margin: 10px;
         width: 100%;
+    }
+
+    .container {
+        width: 375px;
     }
 }
 
