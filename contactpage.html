@@ -51,6 +51,28 @@
                             </div>
 
                             <div class="f-row row-2">
+                                <!-- <div class="form-content">
+                                    <p>Mijn vraag of klacht gaat over een:</p>
+                                    <input type="radio" name="product_option" id="product">
+                                    <label for="product">Product</label>
+                                    <input type="radio" name="product_option" id="service">
+                                    <label for="service">Service</label>
+                                </div> -->
+
+                                <div class="form-content">
+                                    <p>Mijn vraag of klacht gaat over een:</p>
+                                    <label class="container" for="product">Product
+                                        <input type="radio" name="option_radio" id="product">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container" for="service">Service
+                                        <input type="radio" name="option_radio" id="service">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="f-row row-3">
                                 <div class="form-select">
                                     <label for="subjectSelect">Onderwerp:</label>
                                     <select name="subjectSelect" id="subjectSelect">
@@ -64,8 +86,10 @@
                                 </div>
                             </div>
 
-                            <div class="f-row row-3">
+                            <div class="f-row row-4">
                                 <div class="form-content">
+                                    <input type="checkbox" id="newsletter" name="newsletter_checkbox" value="newsletter">
+                                    <label for="newsletter_checkbox">Aboneer op de nieuwsbrief</label> <br>
                                     <input type="submit" value="Verzenden">
                                 </div>
                             </div>
