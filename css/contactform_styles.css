@@ -63,7 +63,85 @@ input:focus, select:focus, textarea:focus {
     border: 1px solid crimson;
 }
 
-.f-row.row-2 select {
+.f-row.row-2 .form-content {
+    margin-bottom: 25px;
+}
+
+.f-row.row-2 p {
+    font-size: 20px;
+}
+
+/* STYLES FOR CUSTOM RADIO BUTTONS | W3SCHOOLS */
+/* style custom labels */
+.f-row.row-2 .container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-top: 10px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* hide browser default radio button */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* create custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #000;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+/* hover over de radiobutton maakt grijs */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: crimson;
+    border: 1px solid crimson;
+}
+
+/* create the dot in the middle */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+/* STYLES FOR CUSTOM RADIO BUTTONS | W3SCHOOLS */
+
+.f-row.row-3 select {
     border: 1px solid crimson;
     background-color: #000;
     color: #fff;
@@ -76,7 +154,7 @@ input:focus, select:focus, textarea:focus {
     font-size: 20px;
 }
 
-.f-row.row-2 textarea {
+.f-row.row-3 textarea {
     border: 1px solid crimson;
     background-color: #000;
     color: #fff;
@@ -90,7 +168,7 @@ input:focus, select:focus, textarea:focus {
     font-size: 20px;
 }
 
-.f-row.row-3 input[type=submit] {
+.f-row.row-4 input[type=submit] {
     padding: 5px;
     border-radius: 4px;
     border: 1px solid crimson;
@@ -103,9 +181,14 @@ input:focus, select:focus, textarea:focus {
     font-size: 20px;
 }
 
-.f-row.row-3 input[type=submit]:hover {
+.f-row.row-4 input[type=submit]:hover {
     border: 1px solid crimson;
     background-color: crimson;
+}
+
+.f-row.row-4 input[type=checkbox] {
+    margin-top: 5px;
+    margin-bottom: 15px;
 }
 
 @media screen and (max-width: 740px) {
@@ -134,11 +217,16 @@ input:focus, select:focus, textarea:focus {
         width: 100%;
     }
 
-    .f-row.row-2 textarea {
+    .f-row.row-2 p {
+        padding-left: 0px;
         width: 100%;
     }
 
-    .f-row.row-2 input[type=submit] {
+    .f-row.row-3 textarea {
+        width: 100%;
+    }
+
+    .f-row.row-3 input[type=submit] {
         width: 100%;
     }
 }
