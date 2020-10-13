@@ -89,12 +89,12 @@ body {margin: 0; font-family: Arial, Helvetica, sans-serif;}
     text-align: center;
     padding: 15px 0;
 }
-.item{
+.video-Item{
     width: 23%;
     height: 350px;
     border:5px solid black;
 }
-.item .image{
+.video-Item span{
     width: 100%;
     height: 100%;
     position: relative;
@@ -104,7 +104,7 @@ body {margin: 0; font-family: Arial, Helvetica, sans-serif;}
     background-position:center;
 }
 
-.item .image .overlay{
+.video-Item span .overlay{
     opacity: 0.8;
     height: 70%;
     bottom: 0;
@@ -115,10 +115,10 @@ body {margin: 0; font-family: Arial, Helvetica, sans-serif;}
     position: absolute;
     width: 100%;
 }
-.item:hover .overlay{
+.video-Item:hover .overlay{
     opacity: 1;
 }
-.item .text{
+.video-Item .text{
     bottom: 0;
     top: auto;
     padding: 15px;
@@ -131,11 +131,11 @@ body {margin: 0; font-family: Arial, Helvetica, sans-serif;}
 
 
 @media screen and (max-width: 376px) {
-    .item{
+    .video-Item{
         width: 100%;
         margin-bottom: 15px;
     }
-    .item:last-of-type{
+    .video-Item:last-of-type{
         margin-bottom: 0;
     }
 }
