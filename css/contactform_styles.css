@@ -88,14 +88,14 @@ input:focus, select:focus, textarea:focus {
 }
 
 /* hide browser default radio button */
-.container input {
+.f-row.row-2 .container input[type=radio] {
     position: absolute;
     opacity: 0;
     cursor: pointer;
 }
 
 /* create custom radio button */
-.checkmark {
+.radio_indicator {
     position: absolute;
     top: 0;
     left: 0;
@@ -107,30 +107,30 @@ input:focus, select:focus, textarea:focus {
 }
 
 /* hover over de radiobutton maakt grijs */
-.container:hover input ~ .checkmark {
+.f-row.row-2 .container:hover input[type=radio] ~ .radio_indicator {
     background-color: #ccc;
 }
 
 /* When the radio button is checked, add a blue background */
-.container input:checked ~ .checkmark {
+.f-row.row-2 .container input[type=radio]:checked ~ .radio_indicator {
     background-color: crimson;
     border: 1px solid crimson;
 }
 
 /* create the dot in the middle */
-.checkmark:after {
+.radio_indicator:after {
     content: "";
     position: absolute;
     display: none;
 }
 
 /* Show the indicator (dot/circle) when checked */
-.container input:checked ~ .checkmark:after {
+.f-row.row-2 .container input[type=radio]:checked ~ .radio_indicator:after {
     display: block;
   }
   
 /* Style the indicator (dot/circle) */
-.container .checkmark:after {
+.f-row.row-2 .container .radio_indicator:after {
     top: 9px;
     left: 9px;
     width: 8px;
@@ -186,10 +186,78 @@ input:focus, select:focus, textarea:focus {
     background-color: crimson;
 }
 
-.f-row.row-4 input[type=checkbox] {
-    margin-top: 5px;
-    margin-bottom: 15px;
+/* STYLES FOR CUSTOM RADIO BUTTONS | W3SCHOOLS */
+/* style custom labels */
+.f-row.row-4 .container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
+
+/* Hide the browser's default checkbox */
+.f-row.row-4 input[type=checkbox] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #000;
+    border: 1px solid white;
+}
+
+/* On mouse-over, add a grey background color */
+.f-row.row-4 .container:hover input[type=checkbox] ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.f-row.row-4 .container input[type=checkbox]:checked ~ .checkmark {
+    background-color: crimson;
+    border: 1px solid crimson;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.f-row.row-4 .container input[type=checkbox]:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.f-row.row-4 .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+/* STYLES FOR CUSTOM RADIO BUTTONS | W3SCHOOLS */
 
 @media screen and (max-width: 740px) {
     .contact-form-container {
