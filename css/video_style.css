@@ -61,6 +61,11 @@
     .vid-frame .main-vid{
         height: 350px;
     }
+    .description {
+        margin: 25px;
+        width: 100%;
+        height: 100%;
+    }
 }
 
 @keyframes slidein {
