@@ -4,9 +4,16 @@
     background:#000;
     padding-top:50px ;
 }
+.video{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    animation: slidein 2s;
+    animation-fill-mode: forwards;
+}
 .vid-frame{
     max-width: 1200px;
-    width: 100%;
+    width: 60%;
     margin: 0 auto;
 }
 
@@ -15,6 +22,12 @@
     height: 650px;
     position: relative;
 }
+.description{
+    width: 30%;
+    height: 650px;
+    position: relative;
+    color: white;
+}
 
 .vid-overview{
     display: flex;
@@ -22,11 +35,14 @@
     flex-direction: row;
     justify-content: space-between;
     margin: 0 25px;
+    padding-bottom: 15px;
 }
 .vid-overview .item{
     width: 19%;
     height: 450px;
     padding-top: 20px;
+    animation: appear 2s;
+    animation-fill-mode: forwards;
 }
 .vid-overview .sub-vid{
     width: 100%;
@@ -46,3 +62,25 @@
         height: 350px;
     }
 }
+
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%; 
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+  
+@keyframes appear {
+    from {
+        transform:scale(0);
+    }
+  
+    to {
+        transform:scale(1);
+    }
+  }
