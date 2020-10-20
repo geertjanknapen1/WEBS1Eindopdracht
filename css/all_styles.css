@@ -543,13 +543,14 @@ input:focus, select:focus, textarea:focus {
         height: 30%;
     } 
 
-    #blog-Item-Reverse .text-Col {
+    .blog-Item:nth-child(2) .text-Col{
         order: 1;
     }
 
-    #blog-Item-Reverse .image-Col {
+    .blog-Item:nth-child(2) .image-Col{
         order: 2;
     }
+    
     /* END | INFORMATIE  */
 
     /* START | CONTACT  */
