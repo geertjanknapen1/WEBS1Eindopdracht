@@ -221,7 +221,7 @@ footer {
         margin-top: -10px;
     }
 
-    .footer-column .social-icons .f-icon-link.instagram:hover {
+    .footer-column .social-icons .footer-icon-link.instagram:hover {
         transition: .3s;
         color: #DD2A7B;
     }
