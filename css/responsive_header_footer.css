@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-/* START | Spacing reset en default font family */
 * {
     margin: 0;
     padding: 0;
@@ -9,15 +8,11 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
-/* END | Spacing reset en default font family */
 
-/* START | Span tag with crimson color for some texts */
 span.crimson {
     color: crimson;
 }
-/* END | Span tag with crimson color for some texts */
 
-/* START | Responsive navigatie menu horizontaal */
 nav {
     height: 50px;
     background: #000;
@@ -76,15 +71,13 @@ nav ul li a {
     display: none;
 }
 
-/* END | Responsive navigatie menu horizontaal */
-
-/* START | Image + text onder menu*/
 .banner-area {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.8)), url('https://images.pexels.com/photos/2080192/pexels-photo-2080192.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
     background-size: cover;
     background-position: center center;
     height: 70vh;
 }
+
 .banner-text {
     position: absolute;
     width: 100%;
@@ -94,15 +87,13 @@ nav ul li a {
     align-items: center;
     justify-content: center;
 }
+
 .banner-text h2{
     color: #fff;
     margin-top: -140px;
     font-size: 56px;
     text-align: center;
 }
-/* END | Image + text onder menu*/
-
-/* START | Three column responsive footer */
 
 footer {
     display: flex;
@@ -114,7 +105,7 @@ footer {
     width: 100%;
 }
 
-.f-column {
+.footer-column {
     width: 33.3333%;
     color: white;
     text-align: left;
@@ -122,28 +113,28 @@ footer {
     height: 100%;
 }
 
-.f-column h3 {
+.footer-column h3 {
     margin-top: 25px;
     margin-bottom: 20px;
     font-size: 25px;
 }
 
-.f-column p {
+.footer-column p {
     font-size: 17px;
 }
 
-.f-column .social-icons .f-icon-link {
+.footer-column .social-icons .f-icon-link {
     display: inline-block;
     padding: 0 5px;
     color: crimson;
 }
 
-.f-column .social-icons .f-icon-link.linkedin:hover {
+.footer-column .social-icons .footer-icon-link.linkedin:hover {
     transition: .3s;
     color: #0E76A8;
 }
 
-.f-column .social-icons .f-icon-link.instagram:hover {
+.footer-column .social-icons .f-icon-link.instagram:hover {
     transition: .3s;
     color: transparent;
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
@@ -151,18 +142,13 @@ footer {
     background-clip: text;
 }
 
-.f-column .social-icons .f-icon-link.facebook:hover {
+.footer-column .social-icons .f-icon-link.facebook:hover {
     transition: .3s;
     color: #1da1f2;
 }
 
-/* END | Three column responsive footer */
-
-
-/* START | Alle responsiviteit */
 @media screen and (max-width: 740px) {
 
-    /* START | Responsiviteit header */
     #open-menu {
         display: block;
     }
@@ -208,9 +194,6 @@ footer {
         display: block;
     }
 
-    /* END | Responsiviteit header */
-
-    /* START | Responsiviteit footer */
     footer {
         height: 500px;
         display: flex;
@@ -219,26 +202,26 @@ footer {
         align-items: center;
     }
 
-    .f-column {
+    .footer-column {
         width: 100%;
         margin: 15px 15px;
     }
 
-    .f-column h3, p, .social-icons {
+    .footer-column h3, p, .social-icons {
         text-align: left;
         padding: 0 20px;
     }
 
-    .f-column h3{
+    .footer-column h3{
         margin-top: 25px;
     }
 
-    .f-column p {
+    .footer-column p {
         font-size: 18px;
         margin-top: -10px;
     }
 
-    .f-column .social-icons .f-icon-link.instagram:hover {
+    .footer-column .social-icons .f-icon-link.instagram:hover {
         transition: .3s;
         color: #DD2A7B;
     }
@@ -247,6 +230,4 @@ footer {
         0% { left: -100; }
         100% { left: 0; }
     }
-    /* END | Responsiviteit footer */
 }
-/* END | Alle responsiviteit */
