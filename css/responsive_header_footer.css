@@ -29,7 +29,8 @@ nav h1 {
 }
 
 nav ul {
-    float: right;
+    position: absolute;
+    right: 0;
     margin-right: 25px;
     list-style: none;
 }
@@ -60,7 +61,8 @@ nav ul li a {
 #close-menu {
     font-size: 30px;
     color: #fff;
-    float: right;
+    position: absolute;
+    right: 0;
     line-height: 50px;
     margin-right: 30px;
     cursor: pointer;
@@ -182,7 +184,7 @@ footer {
     }
 
     #res-menu:checked ~ ul {
-        animation: slideIn 2s;
+        animation: slideIn 0.4s;
         animation-fill-mode: forwards;
     }
 
