@@ -57,6 +57,23 @@ nav ul li a {
     text-decoration: none;
 }
 
+#mobile-link{
+    display: none;
+}
+
+nav ul li .dropdown-menu{
+    display: none;
+}
+
+nav ul li:hover .dropdown-menu{
+    position: absolute;
+    display: block;
+    top: 49px;
+    left: 84.5px;
+    background: black;
+    width: 149.3px;
+}
+
 #open-menu,
 #close-menu {
     font-size: 30px;
@@ -181,6 +198,14 @@ footer {
 
     nav ul li a {
         font-size: 20px;
+    }
+
+    nav ul li:hover .dropdown-menu{
+        display: none;
+    }
+    
+    nav ul #mobile-link{
+        display: block;
     }
 
     #res-menu:checked ~ ul {
