@@ -123,7 +123,7 @@ footer {
     font-size: 17px;
 }
 
-.footer-column .social-icons .f-icon-link {
+.footer-column .social-icons .footer-icon-link {
     display: inline-block;
     padding: 0 5px;
     color: crimson;
@@ -134,7 +134,7 @@ footer {
     color: #0E76A8;
 }
 
-.footer-column .social-icons .f-icon-link.instagram:hover {
+.footer-column .social-icons .footer-icon-link.instagram:hover {
     transition: .3s;
     color: transparent;
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
@@ -142,7 +142,7 @@ footer {
     background-clip: text;
 }
 
-.footer-column .social-icons .f-icon-link.facebook:hover {
+.footer-column .social-icons .footer-icon-link.facebook:hover {
     transition: .3s;
     color: #1da1f2;
 }
