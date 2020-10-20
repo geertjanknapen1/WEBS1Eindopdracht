@@ -1,0 +1,634 @@
+/* START | HOMEPAGE STYLES */
+.main-white {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.text-Field{
+    padding:5% 2%;
+}
+
+.itemList{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 25px 15px;
+}
+
+.itemList h2{
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.video-Item{
+    width: 23%;
+    height: 350px;
+    border:5px solid black;
+}
+
+.video-Item:hover{
+    animation: enlarge-Item 1.2s;
+    animation-fill-mode: forwards;
+    overflow: hidden;
+}
+
+.video-Item span{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    background-image:url('https://www.beautynl.nl/dev/images/blog//Body-protectie-vallen.jpeg'); 
+    background-size:cover; 
+    background-position:center;
+}
+
+.video-Item span .overlay{
+    opacity: 0.8;
+    height: 70%;
+    bottom: 0;
+    top: auto;
+    transition: all 0.3s;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 90%, rgba(0,0,0,0) 100%);
+    z-index: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.video-Item:hover .overlay{
+    opacity: 1;
+}
+
+.video-Item .text{
+    bottom: 0;
+    top: auto;
+    padding: 15px;
+    color: white;
+    position: absolute;
+    font-size: 22px;
+    text-align: center;
+}
+
+/* END | HOMEPAGE STYLES */
+
+/* START | VIDEO OVERVIEW STYLES */
+.cards-row {
+    display: flex;
+    margin: 20px 0;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    margin: 20px 0;
+    width: 20%;
+    border: 1px solid white;
+    border-radius: 4px;
+    transition: 0.3s;
+    box-shadow: 10px 10px 20px rgba(206, 8, 10, 0.5);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.card:hover {
+    transition: 1.5s;
+    transform: scale(1.1);
+    box-shadow: 10px 10px 20px rgba(206, 8, 10);
+}
+
+.card > div {
+    padding: 15px;
+}
+
+.card > div h4 {
+    margin-bottom: 20px;
+}
+
+.card > div a {
+    padding: 5px;
+    text-decoration: none;
+    border: 1px solid crimson;
+    border-radius: 4px;
+    color: black
+}
+
+.card > div a:hover {
+    background-color: crimson;
+    color: white;
+}
+
+.card > div a:hover::after {
+    content: '!';
+}
+
+/* END | VIDEO OVERVIEW STYLES */
+
+/* START | RANDOM VIDEO STYLES */
+.main-black {
+    width: 100%;
+    margin: 0 auto;
+    background:#000;
+    padding-top:50px ;
+}
+
+.video{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    animation: slidein 2s;
+    animation-fill-mode: forwards;
+}
+
+.vid-frame{
+    max-width: 1200px;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.main-vid{
+    width: 100%;
+    height: 650px;
+    position: relative;
+}
+
+.description{
+    width: 30%;
+    height: 650px;
+    position: relative;
+    color: white;
+}
+
+.vid-overview{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 25px;
+    padding-bottom: 15px;
+}
+
+.vid-overview .item{
+    width: 19%;
+    height: 450px;
+    padding-top: 20px;
+    animation: appear 2s;
+    animation-fill-mode: forwards;
+}
+
+.vid-overview .sub-vid{
+    width: 100%;
+    height: 100%;
+}
+
+/* END | RANDOM VIDEO STYLES */
+
+/* START | INFORMATIE STYLES */
+.main-black {
+    width: 100%;
+    margin: 0 auto;
+    background:#000;
+    padding-top:50px ;
+    color: white;
+}
+
+.row{
+    width: 100%;
+}
+
+.blog-Item, #blog-Item-Reverse{
+    width: 100%;
+    padding: 2% 0;
+}
+
+.dis-Flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.image-Col {
+   width: 41%; 
+}
+
+.image{
+    background-image:url('../imgs/info.jpg');
+    height: 100%;
+    background-size: cover;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+.text-Col{
+    width:50%;
+    padding: 40px 50px;
+}
+
+/* END | INFORMATIE STYLES */
+
+/* START | CONTACT STYLES */
+.main {
+    padding: 5% 2%;
+}
+
+.contact-form-container {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: #000;
+    padding: 20px 15px;
+    border: none;
+    border-radius: 15px;
+}
+
+.contact-form-column {
+    display: flex;
+    background-color: #000;
+    margin: 0 5px;
+    width: 50%;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.contact-form-column iframe {
+    border-radius: 15px;
+}
+
+.contact-form {
+    width: 100%;
+}
+
+.form-row.row-1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.form-content {
+    width: 50%;
+}
+
+.form-content label, .form-textarea label, .form-select label {
+    font-size: 20px;
+}
+
+.form-row.row-1 input[type=text], .form-row.row-1 input[type=email] {
+    border: 1px solid crimson;
+    background-color: #000;
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 90%;
+    height: 25px;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 20px;
+}
+
+input:focus, select:focus, textarea:focus {
+    animation: inputGlow 800ms ease-out infinite alternate;
+    outline: none;
+    border: 1px solid crimson;
+}
+
+.form-row.row-2 .form-content {
+    margin-bottom: 25px;
+}
+
+.form-row.row-2 p {
+    font-size: 20px;
+}
+
+.form-row.row-2 .container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-top: 10px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+}
+
+.form-row.row-2 .container input[type=radio] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.radio_indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #000;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.form-row.row-2 .container:hover input[type=radio] ~ .radio_indicator {
+    background-color: #ccc;
+}
+
+.form-row.row-2 .container input[type=radio]:checked ~ .radio_indicator {
+    background-color: crimson;
+    border: 1px solid crimson;
+}
+
+.radio_indicator:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.form-row.row-2 .container input[type=radio]:checked ~ .radio_indicator:after {
+    display: block;
+  }
+  
+.form-row.row-2 .container .radio_indicator:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.form-row.row-3 select {
+    border: 1px solid crimson;
+    background-color: #000;
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 96.7%;
+    height: 35px;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 20px;
+}
+
+.form-row.row-3 textarea {
+    border: 1px solid crimson;
+    background-color: #000;
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 95%;
+    height: 150px;
+    resize: none;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 20px;
+}
+
+.form-row.row-4 input[type=submit] {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid crimson;
+    color: #fff;
+    background-color: #000;
+    height: 50px;
+    width: 120px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.form-row.row-4 input[type=submit]:hover {
+    border: 1px solid crimson;
+    background-color: crimson;
+}
+
+.form-row.row-4 .container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+}
+
+.form-row.row-4 input[type=checkbox] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #000;
+    border: 1px solid white;
+}
+
+.form-row.row-4 .container:hover input[type=checkbox] ~ .checkmark {
+    background-color: #ccc;
+}
+
+.form-row.row-4 .container input[type=checkbox]:checked ~ .checkmark {
+    background-color: crimson;
+    border: 1px solid crimson;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.form-row.row-4 .container input[type=checkbox]:checked ~ .checkmark:after {
+    display: block;
+}
+
+.form-row.row-4 .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+/* END | CONTACT STYLES */
+
+/* START | MEDIA QUERY */
+@media screen and (max-width: 376px) {
+    /* START | HOMEPAGE */
+    .video-Item{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .video-Item:last-of-type{
+        margin-bottom: 0;
+    }
+    /* END | HOMEPAGE */
+
+    /* START | VIDEO OVERVIEW */
+    nav {
+        position: fixed;
+        width: 375px;
+        top: 0;
+        z-index: 10;
+    }
+    
+    main {
+        margin-top: 50px;
+    }
+
+    .card {
+        margin: 25px;
+        width: 95%;
+        font-size: 22px;
+    }
+    /* END | VIDEO OVERVIEW */
+
+    /* START | RANDOM VIDEO  */
+    .vid-overview .item{
+        width: 100%;
+        height: 300px;
+    }
+
+    .vid-overview .item:last-of-type{
+        margin-bottom: 5px;
+    }
+
+    .vid-frame .main-vid{
+        height: 350px;
+    }
+
+    .description {
+        margin: 25px;
+        width: 100%;
+        height: 100%;
+    }
+    /* END | RANDOM VIDEO  */
+
+    /* START | INFORMATIE  */
+    .blog-Item,#blog-Item-Reverse{
+        height: 500px;
+        display: flex;
+    }
+
+    .dis-Flex {
+        justify-content: space-around;
+        margin-top: 20px;
+    }
+
+    .text-Col{
+        width: 100%;
+        height: 70%;
+        padding: 20px 20px;
+    }
+    
+    .text-Col p {
+        margin: 0;
+        padding: 0;
+    }
+
+    .image-Col{
+        width: 100%;
+        height: 30%;
+    } 
+
+    #blog-Item-Reverse .text-Col {
+        order: 1;
+    }
+
+    #blog-Item-Reverse .image-Col {
+        order: 2;
+    }
+    /* END | INFORMATIE  */
+
+    /* START | CONTACT  */
+    .contact-form-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-form-column {
+        margin: 0 0 20px 0;
+        width: 90%;
+        padding: 15px;
+    }
+
+    .form-row.row-1 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-content {
+        width: 100%;
+    }
+
+    .form-row.row-1 input[type=text], .form-row.row-1 input[type=email] {
+        width: 100%;
+    }
+
+    .form-row.row-2 p {
+        padding-left: 0px;
+        width: 100%;
+    }
+
+    .form-row.row-3 textarea {
+        width: 100%;
+    }
+
+    .form-row.row-3 input[type=submit] {
+        width: 100%;
+    }
+    /* END | CONTACT  */
+}
+/* END | MEDIA QUERY */
+
+/* START | KEYFRAMES */
+@keyframes enlarge-Item{
+    0% {
+        transform:scale(1);
+    }
+    100% {
+        transform:scale(1.3);
+        z-index: 5;
+    }  
+}
+
+@keyframes slidein {
+    0% {
+      margin-left: 100%;
+      width: 300%; 
+    }
+  
+    100% {
+      margin-left: 0%;
+      width: 100%;
+    }
+}
+  
+@keyframes appear {
+    0% {
+        transform:scale(0);
+    }
+  
+    100% {
+        transform:scale(1);
+    }
+}
+
+@keyframes inputGlow {
+    0% { box-shadow:  0 0 40px rgba(220, 20, 60, .2); }
+    100% { box-shadow:  0 0 40px rgba(220, 20, 60, .8); }
+}
+/* END | KEYFRAMES */
