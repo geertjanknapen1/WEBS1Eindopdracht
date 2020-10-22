@@ -213,11 +213,16 @@ footer {
         animation-fill-mode: forwards;
     }
 
-    #res-menu:checked ~ #open-menu {
+    #res-menu:not(:checked) ~ ul {
+        animation: slideOut 0.4s;
+        animation-fill-mode: forwards;
+    }
+
+    #res-menu:checked ~ label #open-menu {
         display: none;
     }
 
-    #res-menu:checked ~ #close-menu {
+    #res-menu:checked ~ label #close-menu {
         display: block;
     }
 
@@ -256,5 +261,10 @@ footer {
     @keyframes slideIn {
         0% { left: -100; }
         100% { left: 0; }
+    }
+
+    @keyframes slideOut {
+        0% { left: 0; }
+        100% { left: -100; }
     }
 }
